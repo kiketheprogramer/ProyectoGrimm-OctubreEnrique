@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TrabajoGrimm</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h1 style="font-size: 80px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 70px;">Trabajo Grimm</h1>
+            <ul id="personajes" class="personajes-container" >
+            </ul>
+        </div>
+        <div class="right-column" style="border: 4px solid black;">
+            <form >
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="personaje.nombre" value="">
+
+                <label for="imagenURL">Url de la imagen:</label>
+                <input type="text" id="imagenURL" name="imagenURL" value=" ">
+
+                <label for="peligrosidad">Nivel de peligro:</label>
+                <input type="text" id="peligrosidad" name="personaje.peligrosidad" value="">
+
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="personaje.tipo" value="">
+
+                <label for="descripcion">Descripcion:</label>
+                <textarea type="text" id="descripcion" rows="6" cols="75"></textarea>
+
+                <label for="notas">Notas:</label>
+                <textarea type="text" id="notas" name="notas" rows="6" cols="75"></textarea>
+             
+            </form>
+                
+            <button id="añadir" onclick="AñadirPersonaje()" style="background-color: black;">Añadir</button>
+            
+            <br> 
+            <label for="id">Numero del wessen en la lista que se quiera modificar o borrar:</label>
+            <br>
+            <input type="number" id="id" name="personaje.id" value="">
+            <br>
+            <button id="modificar" onclick="editarPersonaje()"  style="background-color: black;">Modificar</button>
+            <button id="borrar" onclick="eliminarPersonaje()" style="background-color: black;">Borrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
